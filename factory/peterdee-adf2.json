@@ -1,0 +1,9 @@
+{
+	"name": "peterdee-adf2",
+	"location": "australiaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "74ac484a-8e30-41d5-b5d2-e6c95f02d283",
+		"tenantId": "1036fdee-4733-4c2e-961a-55d7359b80a8"
+	}
+}
