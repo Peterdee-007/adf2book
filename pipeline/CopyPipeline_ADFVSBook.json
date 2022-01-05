@@ -2,6 +2,40 @@
 	"name": "CopyPipeline_ADFVSBook",
 	"properties": {
 		"description": "This is a simple pipeline that copies data from SQL Server on Azure to an Azure Storage account",
+		"activities": [
+			{
+				"name": "Copy_ADFV2Book_1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": {
+							"value": "SELECT [CustomerID] \n      ,[CustomerName] \n      ,[CustomerCategoryName] \n      ,[PrimaryContact] \n      ,[AlternateContact] \n      ,[PhoneNumber] \n      ,[FaxNumber] \n      ,[BuyingGroupName] \n      ,[WebsiteURL] \n      ,[DeliveryMethod] \n      ,[CityName] \n  FROM [Website].[Customers]",
+							"type": "Expression"
+						},
+						"queryTimeout": "02:00:00",
+						"isolationLevel": "ReadUncommitted",
+						"partitionOption": "None"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "Worldwide",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
 		"annotations": []
 	}
 }
