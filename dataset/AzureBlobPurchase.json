@@ -1,0 +1,22 @@
+{
+	"name": "AzureBlobPurchase",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADFV2Book_Purchase_Destination",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "datalakegen2pd"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": ""
+		},
+		"schema": []
+	}
+}
