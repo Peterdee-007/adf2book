@@ -1,0 +1,24 @@
+{
+	"name": "ADF2Exercise1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADF2BlobService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ADF2_Ex1.txt",
+				"folderPath": "Ex1",
+				"container": "adf2"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
