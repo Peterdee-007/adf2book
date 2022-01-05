@@ -1,0 +1,7 @@
+{
+	"name": "CopyPipeline_ADFVSBook",
+	"properties": {
+		"description": "This is a simple pipeline that copies data from SQL Server on Azure to an Azure Storage account",
+		"annotations": []
+	}
+}
