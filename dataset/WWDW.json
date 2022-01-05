@@ -1,0 +1,16 @@
+{
+	"name": "WWDW",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSQLDB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "ADFV2Book",
+			"table": "Purchase"
+		}
+	}
+}
